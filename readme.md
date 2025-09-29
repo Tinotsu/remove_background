@@ -2,12 +2,12 @@
 
 ## Stack
 
-model: python + fast API
-frontend: ReactJS + DaisyUI TS
-backend: ExpressJr
-auth: better-auth
-paiement: Stripe
-cloud: aws
+- model: python + fast API
+- frontend: ReactJS + DaisyUI TS
+- backend: ExpressJr
+- auth: better-auth
+- paiement: Stripe
+- cloud: aws
 
 ## Funcrtionnalities
 - Upload an image
