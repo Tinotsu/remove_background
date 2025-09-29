@@ -9,11 +9,12 @@
 - paiement: Stripe
 - cloud: aws
 
-## Funcrtionnalities
+## Functionalities
 - Upload an image
 - Remove background for image/video
 - Select object for image/video
 - Download image/video
 - Preview of image/video with removed background
 
-
+## Library
+https://github.com/danielgatis/rembg
