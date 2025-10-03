@@ -12,7 +12,7 @@ def remove_bg(url):
     output_data = remove(input_data)
 
     output_image = Image.open(io.BytesIO(output_data))
-    output_path = "/home/tino/Pictures/output_image3.png"
+    output_path = "/home/tino/Pictures/image2.png"
     output_image.save(output_path)
     return output_path
 

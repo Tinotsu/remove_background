@@ -1,15 +1,14 @@
-<figure className="diff aspect-16/9" tabIndex={0}>
-  <div className="diff-item-1" role="img" tabIndex={0}>
-    <img
-      alt="daisy"
-      src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a.webp"
-    />
-  </div>
-  <div className="diff-item-2" role="img">
-    <img
-      alt="daisy"
-      src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a-blur.webp"
-    />
-  </div>
-  <div className="diff-resizer"></div>
-</figure>;
+export default function Output({ image }) {
+  return (
+    <div className="w-full card bg-base-100 shadow-sm">
+      <figure>
+        <img src={image} alt="Shoes" />
+      </figure>
+      <div className="card-body bg-base-300 rounded-b-2xl">
+        <div className="card-actions justify-end">
+          <button className="btn btn-primary">Download</button>
+        </div>
+      </div>
+    </div>
+  );
+}
