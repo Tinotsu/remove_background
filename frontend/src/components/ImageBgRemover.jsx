@@ -7,10 +7,10 @@ export default function ImageBgRemover() {
     "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp";
   const [urlImage, setUrlImage] = useState("");
   const [localImage, setLocalImage] = useState(null);
-  const imageDisplayed = urlImage || defaultImage;
+  const imageDisplayed = urlImage || localImage || defaultImage;
   return (
     <>
-      <Input onSelect={setUrlImage} />
+      <Input onSelect={setUrlImage || setLocalImage} />
       <Output image={imageDisplayed} />
     </>
   );

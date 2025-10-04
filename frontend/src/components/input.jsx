@@ -1,15 +1,11 @@
-export default function Input(
-  { onSelect },
-  handleSubmitLocal,
-  handleSubmitUrl,
-) {
+export default function Input({ onSelect }) {
   return (
     <div className="w-fit h-fit mr-8 self-end p-6 flex flex-col gap-2 card bg-secondary shadow-xl">
-      <form onSubmit={handleSubmitLocal} method="post" className="flex gap-2">
+      <form method="post" className="flex gap-2">
         <input
           type="file"
           className="file-input"
-          onChange={(e) => onSelect(e.target.value)}
+          onChange={(e) => onSelect(URL.createObjectURL(e.target.files[0]))}
         ></input>
 
         <input
@@ -19,7 +15,7 @@ export default function Input(
         />
       </form>
       <p className="text-center text-xl font-bold text-primary">or</p>
-      <form onSubmit={handleSubmitUrl} method="post" className="flex gap-2">
+      <form method="post" className="flex gap-2">
         <label className="input validator">
           <svg
             className="h-[1em] opacity-50"
