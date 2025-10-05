@@ -1,3 +1,4 @@
+from requests import status_codes
 from fastapi import FastAPI
 from pydantic import BaseModel
 from .rm_bg import remove_bg
@@ -58,6 +59,10 @@ async def read_image2():
     return FileResponse(path, headers={"Cache-Control": "no-store"})
 
 
-@app.get("/input")
-async def read_input():
-    return
+class Image_URL2(BaseModel):
+    image: str
+
+
+@app.post("/img_client", status_codes=201)
+async def read_client(data: Image_URL2):
+    return {"message": data.image}
