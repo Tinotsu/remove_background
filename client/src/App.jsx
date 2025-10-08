@@ -1,6 +1,10 @@
 import "./App.css";
 import Preview from "./components/preview.jsx";
 import ImageBgRemover from "./components/ImageBgRemover.jsx";
+import ApiTest from "./components/api_test.jsx";
+import LogOut from "./components/auth/logOut.jsx";
+import SignUp from "./components/auth/signUp.jsx";
+import SignIn from "./components/auth/signIn.jsx";
 
 function App() {
   return (
@@ -17,7 +21,11 @@ function App() {
             <ImageBgRemover />
           </div>
         </div>
+        <SignUp />
+        <SignIn />
+        <LogOut />
       </div>
+      <ApiTest />
     </>
   );
 }
